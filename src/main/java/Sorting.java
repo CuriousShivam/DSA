@@ -58,19 +58,17 @@ public class Sorting {
         }
     }
 
-    //Insertion Sort: Select maximum and shift it to its adjacent place
+    //Insertion Sort: Select subarray selecting from 0th index to nth index, and arranging subarrays in collect order
     //Worst/Average Case Time complexity: O(n^2)
     //Best Case Time complexity: O(n)
     void insertionSort(int [] array){
         for(int i = 1; i<= array.length-1; i++){
             int j = i;
             while(j>0 && array[j] < array[j-1]){
-
                     int temp = array[j-1];
                     array[j-1] = array[j];
                     array[j] = temp;
                     j--;
-
             }
         }
     }
